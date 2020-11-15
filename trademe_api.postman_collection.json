@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "ba368199-f10b-4ac6-92ea-c092cde4f296",
+		"name": "TradeMe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8673dc2-3303-402f-aa3c-ab06ecffcc32",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Categories/2.json",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Categories",
+						"2.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
